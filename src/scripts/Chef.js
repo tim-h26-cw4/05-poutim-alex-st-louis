@@ -15,7 +15,15 @@ export default class Chef {
       const instance = new Poutine(poutine);
       this.menu.push(instance);
       console.log(this.army);
-      //perso.addEventListener('click', this.togglePerso.bind(this));  n'est plus utile
     }
+    const boutons = document.querySelectorAll('.js-submit');
+    for (let i = 0; i < boutons.length; i++) {
+      const bouton = boutons[i];
+
+      bouton.addEventListener('click', this.sendOrder.bind(this));
+    }
+  }
+  sendOrder(event) {
+    console.log(event.currentTarget);
   }
 }
