@@ -1,3 +1,4 @@
+import Poutine from './Poutine.js';
 export default class Chef {
   constructor(element) {
     this.element = element;
