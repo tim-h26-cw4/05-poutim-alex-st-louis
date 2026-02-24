@@ -29,6 +29,7 @@ export default class Chef {
     this.container.innerHTML = ``;
     console.log(event.currentTarget);
     const actives = document.querySelectorAll('.js-type.is-active');
+
     for (let i = 0; i < actives.length; i++) {
       const active = actives[i];
 
