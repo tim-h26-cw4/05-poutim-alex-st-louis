@@ -25,14 +25,16 @@ export default class Chef {
   }
   sendOrder(event) {
     this.boutonActive = 0;
+    const p = document.createElement('p');
+    this.container.innerHTML = ``;
     console.log(event.currentTarget);
-    const actives = document.querySelectorAll('.is-active');
+    const actives = document.querySelectorAll('.js-type.is-active');
     for (let i = 0; i < actives.length; i++) {
       const active = actives[i];
 
-      this.boutonActive = i;
+      this.boutonActive++;
     }
-    const p = document.createElement('p');
+    console.log(this.boutonActive);
 
     p.innerHTML = `Nombre total de poutine(s) :  ${this.boutonActive}`;
     this.container.appendChild(p);
