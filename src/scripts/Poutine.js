@@ -23,5 +23,11 @@ export default class Poutine {
     event.currentTarget.classList.toggle('is-active');
     this.selectedType = event.currentTarget.innerText;
     console.log(this.selectedType + ' est selectioné');
+    this.updatePhoto();
+  }
+  updatePhoto() {
+    const image = this.element.querySelector('img');
+    image.classList.add('is-active');
+    image.setAttribute('src', `assets/images/${this.selectedType}.png`);
   }
 }
