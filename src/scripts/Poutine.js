@@ -21,5 +21,7 @@ export default class Poutine {
       type.classList.remove('is-active');
     }
     event.currentTarget.classList.toggle('is-active');
+    this.selectedType = event.currentTarget.innerText;
+    console.log(this.selectedType + ' est selectioné');
   }
 }
