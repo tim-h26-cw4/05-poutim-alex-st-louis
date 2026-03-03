@@ -16,7 +16,7 @@ export default class Chef {
       this.menu.push(instance);
       console.log(this.army);
     }
-    const boutons = document.querySelectorAll('.js-submit');
+    const boutons = this.element.querySelectorAll('.js-submit');
     for (let i = 0; i < boutons.length; i++) {
       const bouton = boutons[i];
 
@@ -28,7 +28,7 @@ export default class Chef {
     const p = document.createElement('p');
     this.container.innerHTML = ``;
     console.log(event.currentTarget);
-    const actives = document.querySelectorAll('.js-type.is-active');
+    const actives = this.element.querySelectorAll('.js-type.is-active');
 
     for (let i = 0; i < actives.length; i++) {
       const active = actives[i];
